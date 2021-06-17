@@ -5,7 +5,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "gitops-demo"
-    key    = "terraform/state/istio"
+    key    = "terraform/state"
     region = "ap-south-1"
   }
 }
