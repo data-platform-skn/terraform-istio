@@ -11,9 +11,9 @@ provider "helm" {
 }
 
 data "aws_eks_cluster" "default" {
-  name = "eks-skn"
+  name = "devops-catalog"
 }
 
 data "aws_eks_cluster_auth" "default" {
-  name = "eks-skn"
+  name = "devops-catalog"
 }
