@@ -2,6 +2,14 @@ provider "aws" {
   region = var.region
 }
 
+terraform {
+  backend "s3" {
+    bucket = "gitops-demo"
+    key    = "terraform/state"
+    region = "ap-south-1"
+  }
+}
+
 provider "helm" {
   kubernetes {
   host                   = data.aws_eks_cluster.default.endpoint
